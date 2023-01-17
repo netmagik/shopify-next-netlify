@@ -8,8 +8,8 @@ export default function CartPage() {
   return (
     <>
       <Head>
-        <title>Shoperoni | Cart</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>LifeFitness | Cart</title>
+        <link rel="icon" href="/LifeFitness-favicon.webp" />
       </Head>
 
       <Header />
