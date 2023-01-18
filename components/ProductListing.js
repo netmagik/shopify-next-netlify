@@ -3,7 +3,6 @@ import { formatPrice } from "../utilityFunctions";
 
 export default function ProductListing({ product }) {
   let image = product.images.edges[0].node;
-  console.log({product})
   return (
     <li className="product-card">
       <div className="product-card-frame">

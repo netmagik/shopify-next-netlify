@@ -370,7 +370,6 @@ main {
   }
 } */
 .product-card {
-  /* max-height: 500px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -387,7 +386,6 @@ main {
   -webkit-line-clamp: 2;
 }
 .product-card-frame {
-  /* height: 120px; */
   margin-bottom: 0.5rem;
   display: flex;
   align-content: center;
