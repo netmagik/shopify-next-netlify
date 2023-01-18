@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export default function Header() {
+
   return (
     <header className="app-header">
       <h1>
@@ -30,8 +31,9 @@ export default function Header() {
             </Link>
           </li>
         </ul>
+        <div id="select"></div>
       </nav>
-      <div id="search"></div>
+   
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
     </header>
   );

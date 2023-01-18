@@ -109,9 +109,9 @@ export default function ProductPageContent({ product }) {
         />
 
         {product.totalInventory > 0 ? (
-          <button onClick={handleAddToCart}>Add to Cart</button>
+          <button className="btn" onClick={handleAddToCart}>Add to Cart</button>
         ) : (
-          <button className="disabled" disabled>
+          <button className="disabled btn" disabled>
             Out of Stock
           </button>
         )}
