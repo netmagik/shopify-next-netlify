@@ -1,4 +1,16 @@
 export default function Footer() {
+
+  const {ALGOLIA_API_KEY} = process.env
+
+ const body = {
+    appId: '1QQS2M2LF7',
+    apiKey: '<ALGOLIA_API_KEY>',
+    siteId: 'b318f5f8-b751-4aaa-94e7-c82711705cd6',
+    branch: 'main',
+    selector: 'div#search',
+  };
+
+
   return (
     <>
       <footer>
