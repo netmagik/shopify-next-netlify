@@ -13,9 +13,9 @@ export default function ProductListing({ product }) {
       <div className="product-card-text">
         <h3 className="product-card-title">{product.title}</h3>
         <p className="product-card-price">{formatPrice(product.priceRange.minVariantPrice.amount)}</p>
-        <p className="product-card-description">
+        {/* <p className="product-card-description">
           {product.description.substring(0, 60)}...
-        </p>
+        </p> */}
       </div>
       {/* <Link href={`/product/${product.handle}`}>
         <a>
