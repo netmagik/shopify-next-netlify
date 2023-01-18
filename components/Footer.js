@@ -3,44 +3,46 @@ export default function Footer() {
     <>
       <footer>
         <section className="testimonial">
-          <h2>
-            "The interplay of flavors between the cheese, meats and fruits is an
-            absolute delight."
+          <h2 className="banner">
+          LIFE FITNESS ON DEMAND+
           </h2>
-          <p>Paul Hotcakes</p>
+          <button className="cta">LEARN MORE</button>
         </section>
         <section className="app-footer-links">
           <ul>
-            <li>About</li>
-            <li>Company</li>
-            <li>Locations</li>
-            <li>Contact</li>
-            <li>Hours</li>
+            <span>CUSTOMER SUPPORT</span>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+            <li>Accessibility</li>
+            <li>Affiliate Program</li>
+            <li>Financing</li>
           </ul>
           <ul>
-            <li>Twitter</li>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>LinkedIn</li>
+            <span>PRODUCT SUPPORT</span>
+            <li>FAQ</li>
+            <li>Contact Us</li>
+            <li>Returns & Cancellations</li>
+            <li>Request Service</li>
           </ul>
-          <div className="newsletter">
+          {/* <div className="newsletter">
             <h2 className="newsletter-title">Sign up for our newsletter:</h2>
             <input
               className="newsletter-input"
               type="email"
               placeholder="Enter your email"
             />
-          </div>
+          </div> */}
+           <ul>
+            <span>COMPANY</span>
+            <li>Life Fitness Family of Brands</li>
+            <li>Careers</li>
+            <li>Press Releases</li>
+            <li>Privacy Policy</li>
+          </ul>
         </section>
         <div className="project-credit">
           <p>
-            This project is
-            <a href="https://github.com/chrishannaby/shopify-next-netlify">
-              open source on GitHub
-            </a>
-            , hosted with <a href="https://bit.ly/2G29YwK">Netlify</a>, built
-            with Next.js and made with 💚 by Cassidy Williams (
-            <a href="https://twitter.com/cassidoo">@cassidoo</a>)
+          © 2023 Life Fitness. All Rights Reserved. Life Fitness is a registered trademark.
           </p>
         </div>
       </footer>

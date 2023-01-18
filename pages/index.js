@@ -1,17 +1,13 @@
-import Head from "next/head";
 import ProductListing from "@components/ProductListing";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import Meta from "@components/Meta";
 import { getProductList } from "@api/getProductList";
 
 export default function Home({ products }) {
   return (
     <>
-      <Head>
-        <title>Cheese and Meat Shop</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Meta title="Fitness & Exercise Equipment for Your Facility or Home | Life Fitness" />
       <Header />
       <main>
         <ul className="product-grid">

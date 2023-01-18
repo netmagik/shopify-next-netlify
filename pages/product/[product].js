@@ -8,8 +8,8 @@ export default function ProductPage({ product }) {
   return (
     <div className="container">
       <Head>
-        <title>Shoperoni | Buy {product.node.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>LifeFitness | Buy {product.node.title}</title>
+        <link rel="icon" href="/LifeFitness-favicon.webp" />
       </Head>
 
       <Header />
