@@ -1,4 +1,5 @@
 export default function Footer() {
+
   return (
     <>
       <footer>
@@ -6,7 +7,7 @@ export default function Footer() {
           <h2 className="banner">
           LIFE FITNESS ON DEMAND+
           </h2>
-          <button className="cta">LEARN MORE</button>
+          <button className="cta btn">LEARN MORE</button>
         </section>
         <section className="app-footer-links">
           <ul>
@@ -24,14 +25,7 @@ export default function Footer() {
             <li>Returns & Cancellations</li>
             <li>Request Service</li>
           </ul>
-          {/* <div className="newsletter">
-            <h2 className="newsletter-title">Sign up for our newsletter:</h2>
-            <input
-              className="newsletter-input"
-              type="email"
-              placeholder="Enter your email"
-            />
-          </div> */}
+       
            <ul>
             <span>COMPANY</span>
             <li>Life Fitness Family of Brands</li>
@@ -46,6 +40,6 @@ export default function Footer() {
           </p>
         </div>
       </footer>
-    </>
+      </>
   );
 }

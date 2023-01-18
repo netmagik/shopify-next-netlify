@@ -5,10 +5,11 @@ import Meta from "@components/Meta";
 import { getProductList } from "@api/getProductList";
 
 export default function Home({ products }) {
+
   return (
     <>
     <Meta title="Fitness & Exercise Equipment for Your Facility or Home | Life Fitness" />
-      <Header />
+      <Header  />
       <main>
         <ul className="product-grid">
           {products.map((p, index) => {
