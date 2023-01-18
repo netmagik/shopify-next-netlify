@@ -1,17 +1,13 @@
-import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Cart from '@components/Cart';
+import Meta from '@components/Meta'
 import { useAppContext } from '../state';
 
 export default function CartPage() {
   return (
     <>
-      <Head>
-        <title>LifeFitness | Cart</title>
-        <link rel="icon" href="/LifeFitness-favicon.webp" />
-      </Head>
-
+     <Meta title="LifeFitness | Cart" />
       <Header />
       <main className="cart-page">
         <article className="cart-page-content">

@@ -5,7 +5,9 @@ export default function ProductListing({ product }) {
   return (
     <li className="product-card">
       <div className="product-card-frame">
-        <img className="prodimg" src={image.src} alt={image.altText} />
+        <Link href={`/product/${product.handle}`}>
+          <a><img className="prodimg" src={image.src} alt={image.altText} /></a>
+        </Link>
       </div>
       <div className="product-card-text">
         <h3 className="product-card-title">{product.title}</h3>
@@ -13,11 +15,11 @@ export default function ProductListing({ product }) {
           {product.description.substring(0, 60)}...
         </p>
       </div>
-      <Link href={`/product/${product.handle}`}>
+      {/* <Link href={`/product/${product.handle}`}>
         <a>
           <button>View Item {`>`} </button>
         </a>
-      </Link>
+      </Link> */}
     </li>
   );
 }
