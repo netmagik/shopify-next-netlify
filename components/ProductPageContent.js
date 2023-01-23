@@ -55,12 +55,10 @@ export default function ProductPageContent({ product }) {
   // Cost of the chosen variant
   const [cost, setCost] = useState("");
 
-  const { cartId, setCartId } = useAppContext();
+  const { cartId, setCartId, items, setItems } = useAppContext();
 
   useEffect(() => {
-    let variantPrice = getCurrentVariantObject(vars, chosenVariant).node.priceV2
-      .amount;
-
+    let variantPrice = getCurrentVariantObject(vars, chosenVariant).node.priceV2.amount;
     setCost(formatPrice(variantPrice * quantity));
   }, [chosenVariant, quantity, cost]);
 
@@ -83,6 +81,9 @@ export default function ProductPageContent({ product }) {
 
     const data = await cartResponse.json();
     setCartId(data.id);
+
+    // Add total item quantities in the cart
+    setItems(items => items + quantity)
 
     return data;
   };

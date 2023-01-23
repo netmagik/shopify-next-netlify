@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { useAppContext } from '../state';
 
 export default function Header() {
+  const {items} = useAppContext()
 
   return (
     <header className="app-header">
@@ -27,7 +29,7 @@ export default function Header() {
           </li> */}
           <li className="main-nav-item">
             <Link href="/cart">
-              <a className="cart cartLink">Shopping Cart</a>
+              {items > 0 ?  <a className="cart cartLink">Shopping Cart - <span className="cart-size">{items} </span></a> :  <a className="cart cartLink">Shopping Cart</a>}
             </Link>
           </li>
         </ul>
