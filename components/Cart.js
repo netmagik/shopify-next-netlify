@@ -7,7 +7,7 @@ export default function Cart() {
   const [showProducts, setShowProducts] = useState(true);
   const [products, setProducts] = useState([]);
   const [cost, setCost] = useState({});
-  const { cartId, setCartId } = useAppContext();
+  const { cartId, setCartId, items } = useAppContext();
 
   useEffect(async () => {
     const localCart = cartId;
@@ -26,9 +26,12 @@ export default function Cart() {
       const json = await response.json();
       setProducts(json?.cart?.lines.edges);
       setCost(json?.cart?.estimatedCost);
+
       return json;
     }
   }, []);
+
+  // console.log(`Products: ${JSON.stringify(products)}`)
 
   return (
     <div>
@@ -38,8 +41,10 @@ export default function Cart() {
             cartItems={products}
             cartId={cartId}
             removeItem={setProducts}
-          />
-          <CartTotal cost={cost} />
+           />
+          <CartTotal 
+            cost={cost} 
+           />
         </div>
       ) : (
         <div className="cart-page-message">

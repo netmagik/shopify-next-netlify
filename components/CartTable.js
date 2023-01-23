@@ -1,7 +1,11 @@
 import { formatPrice, itemTotal } from "../utilityFunctions";
+import { useAppContext } from "../state";
 
-export default function CartTable({ cartItems, cartId, removeItem }) {
-  let removeItemFromCart = (itemId) => {
+export default function CartTable({ cartItems, cartId, removeItem}) {
+    
+  const { items, setItems } = useAppContext()
+
+    let removeItemFromCart = (itemId, quantity) => {
     fetch("/.netlify/functions/remove-from-cart", {
       method: "POST",
       body: JSON.stringify({
@@ -14,7 +18,11 @@ export default function CartTable({ cartItems, cartId, removeItem }) {
         console.log("--- Item deleted ---");
 
         removeItem(response.lines.edges);
+       
+        // Set updated quantity of items in cart after removing an item from cart
+        setItems(items => items - quantity)
         return response;
+
       });
   };
 
@@ -32,7 +40,7 @@ export default function CartTable({ cartItems, cartId, removeItem }) {
       <tbody>
         {cartItems.map((item, index) => {
           item = item.node;
-
+  
           let merchandiseTitle =
             item.merchandise.title === "Default Title"
               ? ""
@@ -55,7 +63,7 @@ export default function CartTable({ cartItems, cartId, removeItem }) {
               <td className="cart-table-cell">
                 <button className="btn"
                   onClick={() => {
-                    removeItemFromCart(item.id);
+                    removeItemFromCart(item.id, item.quantity);
                   }}
                 >
                   Remove Item

@@ -124,12 +124,12 @@ input {
 .cart-size {
   position: absolute;
   top: -18px;
-  right: -20px;
+  right: 3px;
   width: 25px;
   height: 25px;
   padding: 6px 10px;
   border-radius: 1000px;
-  background: #000;
+  background: #d11f2e;
   text-align: center;
   color: #fff;
   font-size: 10px;
@@ -137,7 +137,8 @@ input {
 }
 @media screen and (min-width: 768px) {
   .cart-size {
-    right: -18px;
+    right: 3px;
+    font-size: 12px;
   }
 }
 .testimonial {

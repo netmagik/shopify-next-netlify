@@ -30,7 +30,6 @@ exports.handler = async (event) => {
       cartId,
       lineId,
     });
-
     return {
       statusCode: 200,
       body: JSON.stringify(shopifyResponse.cartLinesRemove.cart),
